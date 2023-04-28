@@ -1,6 +1,8 @@
-package ge.softgen.softlab.jwtsecurity.auth;
+package ge.softgen.softlab.jwtsecurity.service;
 
-import ge.softgen.softlab.jwtsecurity.config.JwtService;
+import ge.softgen.softlab.jwtsecurity.auth.AuthenticationRequest;
+import ge.softgen.softlab.jwtsecurity.auth.AuthenticationResponse;
+import ge.softgen.softlab.jwtsecurity.auth.RegisterRequest;
 import ge.softgen.softlab.jwtsecurity.repository.UserRepository;
 import ge.softgen.softlab.jwtsecurity.user.Role;
 import ge.softgen.softlab.jwtsecurity.user.User;

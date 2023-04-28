@@ -1,5 +1,6 @@
 package ge.softgen.softlab.jwtsecurity.auth;
 
+import ge.softgen.softlab.jwtsecurity.service.AuthenticationService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -26,7 +27,6 @@ public class AuthenticationController {
             @RequestBody AuthenticationRequest request
     ) {
         return ResponseEntity.ok(service.authenticate(request));
-
     }
 
 

@@ -1,4 +1,4 @@
-package ge.softgen.softlab.jwtsecurity.config;
+package ge.softgen.softlab.jwtsecurity.service;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
@@ -18,7 +18,7 @@ import java.util.function.Function;
 public class JwtService {
 
     private static final String SECRET_KEY =
-            "3273357638792F423F4528482B4D6251655468576D597133743677397A244326";
+            "25432A46294A404E635266556A586E3272357538782F413F4428472B4B6150645367566B5970337336763979244226452948404D6351655468576D5A71347437";
 
     public String extractUsername(String token) {
         return extractClaim(token, Claims::getSubject);
@@ -38,7 +38,7 @@ public class JwtService {
                 .setClaims(extractClaims)
                 .setSubject(userDetails.getUsername())
                 .setIssuedAt(new Date(System.currentTimeMillis()))
-                .setExpiration(new Date(System.currentTimeMillis() + 1000 * 60 * 24))
+                .setExpiration(new Date(System.currentTimeMillis() + 60 * 60 * 24))
                 .signWith(getSignInKey(), SignatureAlgorithm.ES256)
                 .compact();
     }
